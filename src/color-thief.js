@@ -146,9 +146,6 @@ ColorThief.prototype.getPalette = function(sourceImage, colorCount, quality) {
     var cmap    = MMCQ.quantize(pixelArray, colorCount);
     var palette = cmap? cmap.palette() : null;
 
-    // Clean up
-    image.removeCanvas();
-
     return palette;
 };
 
